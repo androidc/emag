@@ -16,6 +16,20 @@
 		1BA2E5F92A35E17300631B6C /* EMagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5F82A35E17300631B6C /* EMagTests.swift */; };
 		1BA2E6032A35E17300631B6C /* EMagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6022A35E17300631B6C /* EMagUITests.swift */; };
 		1BA2E6052A35E17300631B6C /* EMagUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6042A35E17300631B6C /* EMagUITestsLaunchTests.swift */; };
+		1BA2E61D2A3757E000631B6C /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E61C2A3757E000631B6C /* ErrorParser.swift */; };
+		1BA2E61F2A37589B00631B6C /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E61E2A37589B00631B6C /* DataRequest.swift */; };
+		1BA2E6232A375C0B00631B6C /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6222A375C0B00631B6C /* RequestRouter.swift */; };
+		1BA2E6252A375C8100631B6C /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6242A375C8100631B6C /* LoginResult.swift */; };
+		1BA2E6272A375CB800631B6C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6262A375CB800631B6C /* User.swift */; };
+		1BA2E62A2A375D2600631B6C /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6292A375D2600631B6C /* AuthRequestFactory.swift */; };
+		1BA2E62C2A375D7000631B6C /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E62B2A375D7000631B6C /* AuthRequest.swift */; };
+		1BA2E62E2A375ECB00631B6C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E62D2A375ECB00631B6C /* RequestFactory.swift */; };
+		1BA2E6312A3777D600631B6C /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6302A3777D600631B6C /* Client.swift */; };
+		1BA2E6332A37783200631B6C /* ClientRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6322A37783200631B6C /* ClientRequestFactory.swift */; };
+		1BA2E6352A3778C400631B6C /* ClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E6342A3778C400631B6C /* ClientRequest.swift */; };
+		51B4F4FB0E1024C78D653435 /* Pods_EMag_EMagUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1303D747BCFE65E55E8BF28A /* Pods_EMag_EMagUITests.framework */; };
+		87A1386CFDE5BF7157FCC831 /* Pods_EMagTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3BF7224A3AEFE93DA891C3 /* Pods_EMagTests.framework */; };
+		C2A0870A4D8DBF8526130A58 /* Pods_EMag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E3FFDBFB7944C287F6A64 /* Pods_EMag.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AA5DB85F49DE97D7EC66AEA /* Pods-EMagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMagTests.debug.xcconfig"; path = "Target Support Files/Pods-EMagTests/Pods-EMagTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1303D747BCFE65E55E8BF28A /* Pods_EMag_EMagUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMag_EMagUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA2E5DE2A35E16E00631B6C /* EMag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,24 @@
 		1BA2E5FE2A35E17300631B6C /* EMagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA2E6022A35E17300631B6C /* EMagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMagUITests.swift; sourceTree = "<group>"; };
 		1BA2E6042A35E17300631B6C /* EMagUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMagUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1BA2E61C2A3757E000631B6C /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		1BA2E61E2A37589B00631B6C /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		1BA2E6222A375C0B00631B6C /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		1BA2E6242A375C8100631B6C /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		1BA2E6262A375CB800631B6C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1BA2E6292A375D2600631B6C /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
+		1BA2E62B2A375D7000631B6C /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		1BA2E62D2A375ECB00631B6C /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		1BA2E6302A3777D600631B6C /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		1BA2E6322A37783200631B6C /* ClientRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequestFactory.swift; sourceTree = "<group>"; };
+		1BA2E6342A3778C400631B6C /* ClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequest.swift; sourceTree = "<group>"; };
+		310E3FFDBFB7944C287F6A64 /* Pods_EMag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68E1D4BB06ECECDEF6A114B1 /* Pods-EMagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMagTests.release.xcconfig"; path = "Target Support Files/Pods-EMagTests/Pods-EMagTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A3BF7224A3AEFE93DA891C3 /* Pods_EMagTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMagTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9660A8FB78198D7AAF5D81FF /* Pods-EMag-EMagUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMag-EMagUITests.release.xcconfig"; path = "Target Support Files/Pods-EMag-EMagUITests/Pods-EMag-EMagUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA9D2B835353993383061C97 /* Pods-EMag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMag.release.xcconfig"; path = "Target Support Files/Pods-EMag/Pods-EMag.release.xcconfig"; sourceTree = "<group>"; };
+		E1E02FAC8157F02ACE06556C /* Pods-EMag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMag.debug.xcconfig"; path = "Target Support Files/Pods-EMag/Pods-EMag.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB4D52F12A1B767B0086B8E /* Pods-EMag-EMagUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMag-EMagUITests.debug.xcconfig"; path = "Target Support Files/Pods-EMag-EMagUITests/Pods-EMag-EMagUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A0870A4D8DBF8526130A58 /* Pods_EMag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A1386CFDE5BF7157FCC831 /* Pods_EMagTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B4F4FB0E1024C78D653435 /* Pods_EMag_EMagUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +120,8 @@
 				1BA2E5F72A35E17300631B6C /* EMagTests */,
 				1BA2E6012A35E17300631B6C /* EMagUITests */,
 				1BA2E5DF2A35E16E00631B6C /* Products */,
+				FCB5464C37CC119E5CB8196F /* Pods */,
+				728BFAF5157F4A9F9F7766F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +138,7 @@
 		1BA2E5E02A35E16E00631B6C /* EMag */ = {
 			isa = PBXGroup;
 			children = (
+				1BA2E5EF2A35E17300631B6C /* Info.plist */,
 				1BA2E6142A372F3300631B6C /* App */,
 				1BA2E6132A372F2800631B6C /* Core */,
 				1BA2E6122A372F1600631B6C /* Resources */,
@@ -127,7 +167,6 @@
 		1BA2E6112A372F0500631B6C /* Environments */ = {
 			isa = PBXGroup;
 			children = (
-				1BA2E5EF2A35E17300631B6C /* Info.plist */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -135,6 +174,7 @@
 		1BA2E6122A372F1600631B6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1BA2E5EC2A35E17300631B6C /* LaunchScreen.storyboard */,
 				1BA2E5EA2A35E17300631B6C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -143,6 +183,7 @@
 		1BA2E6132A372F2800631B6C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1BA2E61B2A3757BB00631B6C /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -150,7 +191,8 @@
 		1BA2E6142A372F3300631B6C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				1BA2E5E52A35E16E00631B6C /* ViewController.swift */,
+				1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */,
+				1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */,
 				1BA2E6182A372F5B00631B6C /* BusinessLogic */,
 				1BA2E6172A372F5300631B6C /* Entity */,
 				1BA2E6162A372F4600631B6C /* Assembly */,
@@ -162,10 +204,8 @@
 		1BA2E6152A372F3C00631B6C /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */,
-				1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */,
+				1BA2E5E52A35E16E00631B6C /* ViewController.swift */,
 				1BA2E5E72A35E16E00631B6C /* Main.storyboard */,
-				1BA2E5EC2A35E17300631B6C /* LaunchScreen.storyboard */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -180,6 +220,9 @@
 		1BA2E6172A372F5300631B6C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				1BA2E6242A375C8100631B6C /* LoginResult.swift */,
+				1BA2E6262A375CB800631B6C /* User.swift */,
+				1BA2E6302A3777D600631B6C /* Client.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -187,8 +230,70 @@
 		1BA2E6182A372F5B00631B6C /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				1BA2E6282A375D0F00631B6C /* Network */,
 			);
 			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		1BA2E61B2A3757BB00631B6C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E61C2A3757E000631B6C /* ErrorParser.swift */,
+				1BA2E61E2A37589B00631B6C /* DataRequest.swift */,
+				1BA2E6222A375C0B00631B6C /* RequestRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1BA2E6282A375D0F00631B6C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E6362A37797000631B6C /* Auth */,
+				1BA2E62F2A3777AD00631B6C /* Client */,
+				1BA2E62D2A375ECB00631B6C /* RequestFactory.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1BA2E62F2A3777AD00631B6C /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E6322A37783200631B6C /* ClientRequestFactory.swift */,
+				1BA2E6342A3778C400631B6C /* ClientRequest.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		1BA2E6362A37797000631B6C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E6292A375D2600631B6C /* AuthRequestFactory.swift */,
+				1BA2E62B2A375D7000631B6C /* AuthRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		728BFAF5157F4A9F9F7766F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				310E3FFDBFB7944C287F6A64 /* Pods_EMag.framework */,
+				1303D747BCFE65E55E8BF28A /* Pods_EMag_EMagUITests.framework */,
+				7A3BF7224A3AEFE93DA891C3 /* Pods_EMagTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCB5464C37CC119E5CB8196F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1E02FAC8157F02ACE06556C /* Pods-EMag.debug.xcconfig */,
+				AA9D2B835353993383061C97 /* Pods-EMag.release.xcconfig */,
+				EFB4D52F12A1B767B0086B8E /* Pods-EMag-EMagUITests.debug.xcconfig */,
+				9660A8FB78198D7AAF5D81FF /* Pods-EMag-EMagUITests.release.xcconfig */,
+				0AA5DB85F49DE97D7EC66AEA /* Pods-EMagTests.debug.xcconfig */,
+				68E1D4BB06ECECDEF6A114B1 /* Pods-EMagTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA2E6082A35E17300631B6C /* Build configuration list for PBXNativeTarget "EMag" */;
 			buildPhases = (
+				2CE640E9A3AEFD36A5EAF913 /* [CP] Check Pods Manifest.lock */,
 				1BA2E5DA2A35E16E00631B6C /* Sources */,
 				1BA2E5DB2A35E16E00631B6C /* Frameworks */,
 				1BA2E5DC2A35E16E00631B6C /* Resources */,
+				183DB5288ADD702BC05A7C6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +322,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA2E60B2A35E17300631B6C /* Build configuration list for PBXNativeTarget "EMagTests" */;
 			buildPhases = (
+				037186B1B37CBD58ABF8BE48 /* [CP] Check Pods Manifest.lock */,
 				1BA2E5F02A35E17300631B6C /* Sources */,
 				1BA2E5F12A35E17300631B6C /* Frameworks */,
 				1BA2E5F22A35E17300631B6C /* Resources */,
@@ -233,9 +341,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BA2E60E2A35E17300631B6C /* Build configuration list for PBXNativeTarget "EMagUITests" */;
 			buildPhases = (
+				E1B185A9F94C82F3A0FEF776 /* [CP] Check Pods Manifest.lock */,
 				1BA2E5FA2A35E17300631B6C /* Sources */,
 				1BA2E5FB2A35E17300631B6C /* Frameworks */,
 				1BA2E5FC2A35E17300631B6C /* Resources */,
+				FE9D4EBCE7493962BC0384F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,14 +427,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		037186B1B37CBD58ABF8BE48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMagTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		183DB5288ADD702BC05A7C6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EMag/Pods-EMag-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EMag/Pods-EMag-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EMag/Pods-EMag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CE640E9A3AEFD36A5EAF913 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B185A9F94C82F3A0FEF776 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMag-EMagUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9D4EBCE7493962BC0384F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EMag-EMagUITests/Pods-EMag-EMagUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EMag-EMagUITests/Pods-EMag-EMagUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EMag-EMagUITests/Pods-EMag-EMagUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BA2E5DA2A35E16E00631B6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA2E62E2A375ECB00631B6C /* RequestFactory.swift in Sources */,
 				1BA2E5E62A35E16E00631B6C /* ViewController.swift in Sources */,
+				1BA2E6312A3777D600631B6C /* Client.swift in Sources */,
+				1BA2E61F2A37589B00631B6C /* DataRequest.swift in Sources */,
+				1BA2E62A2A375D2600631B6C /* AuthRequestFactory.swift in Sources */,
+				1BA2E6232A375C0B00631B6C /* RequestRouter.swift in Sources */,
+				1BA2E6332A37783200631B6C /* ClientRequestFactory.swift in Sources */,
 				1BA2E5E22A35E16E00631B6C /* AppDelegate.swift in Sources */,
+				1BA2E6352A3778C400631B6C /* ClientRequest.swift in Sources */,
+				1BA2E6252A375C8100631B6C /* LoginResult.swift in Sources */,
+				1BA2E62C2A375D7000631B6C /* AuthRequest.swift in Sources */,
+				1BA2E6272A375CB800631B6C /* User.swift in Sources */,
 				1BA2E5E42A35E16E00631B6C /* SceneDelegate.swift in Sources */,
+				1BA2E61D2A3757E000631B6C /* ErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +722,7 @@
 		};
 		1BA2E6092A35E17300631B6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E02FAC8157F02ACE06556C /* Pods-EMag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -526,6 +751,7 @@
 		};
 		1BA2E60A2A35E17300631B6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9D2B835353993383061C97 /* Pods-EMag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +780,7 @@
 		};
 		1BA2E60C2A35E17300631B6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA5DB85F49DE97D7EC66AEA /* Pods-EMagTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +806,7 @@
 		};
 		1BA2E60D2A35E17300631B6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E1D4BB06ECECDEF6A114B1 /* Pods-EMagTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +832,7 @@
 		};
 		1BA2E60F2A35E17300631B6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB4D52F12A1B767B0086B8E /* Pods-EMag-EMagUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +856,7 @@
 		};
 		1BA2E6102A35E17300631B6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9660A8FB78198D7AAF5D81FF /* Pods-EMag-EMagUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
