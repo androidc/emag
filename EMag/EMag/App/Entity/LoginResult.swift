@@ -10,3 +10,9 @@ struct LoginResult: Codable {
 struct LogoutResult: Codable {
     let result: Int
 }
+
+
+struct RegisterResult: Codable {
+    let result: Int
+    let userMessage: String
+}
