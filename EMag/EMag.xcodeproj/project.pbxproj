@@ -99,13 +99,10 @@
 		1BA2E5E02A35E16E00631B6C /* EMag */ = {
 			isa = PBXGroup;
 			children = (
-				1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */,
-				1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */,
-				1BA2E5E52A35E16E00631B6C /* ViewController.swift */,
-				1BA2E5E72A35E16E00631B6C /* Main.storyboard */,
-				1BA2E5EA2A35E17300631B6C /* Assets.xcassets */,
-				1BA2E5EC2A35E17300631B6C /* LaunchScreen.storyboard */,
-				1BA2E5EF2A35E17300631B6C /* Info.plist */,
+				1BA2E6142A372F3300631B6C /* App */,
+				1BA2E6132A372F2800631B6C /* Core */,
+				1BA2E6122A372F1600631B6C /* Resources */,
+				1BA2E6112A372F0500631B6C /* Environments */,
 			);
 			path = EMag;
 			sourceTree = "<group>";
@@ -125,6 +122,73 @@
 				1BA2E6042A35E17300631B6C /* EMagUITestsLaunchTests.swift */,
 			);
 			path = EMagUITests;
+			sourceTree = "<group>";
+		};
+		1BA2E6112A372F0500631B6C /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E5EF2A35E17300631B6C /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		1BA2E6122A372F1600631B6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E5EA2A35E17300631B6C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1BA2E6132A372F2800631B6C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1BA2E6142A372F3300631B6C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E5E52A35E16E00631B6C /* ViewController.swift */,
+				1BA2E6182A372F5B00631B6C /* BusinessLogic */,
+				1BA2E6172A372F5300631B6C /* Entity */,
+				1BA2E6162A372F4600631B6C /* Assembly */,
+				1BA2E6152A372F3C00631B6C /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1BA2E6152A372F3C00631B6C /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */,
+				1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */,
+				1BA2E5E72A35E16E00631B6C /* Main.storyboard */,
+				1BA2E5EC2A35E17300631B6C /* LaunchScreen.storyboard */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		1BA2E6162A372F4600631B6C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		1BA2E6172A372F5300631B6C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1BA2E6182A372F5B00631B6C /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
