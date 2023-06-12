@@ -4,7 +4,7 @@ import Foundation
 import Alamofire
 
 class RequestFactory {
-    func makeErrorParser() -> AbstractErrorParser {
+  func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
     
@@ -18,14 +18,7 @@ class RequestFactory {
         return manager
     }()
     
-//    func newSession() -> Session {
-//        let configuration = URLSessionConfiguration.default
-//        configuration.httpShouldSetCookies = true
-//        configuration.headers = .default
-//        let manager = Session(configuration: configuration)
-//        return manager
-//    }
-    
+
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
     func makeAuthRequestFatory() -> AuthRequestFactory {

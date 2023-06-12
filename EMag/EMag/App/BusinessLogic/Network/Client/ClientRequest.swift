@@ -24,8 +24,6 @@ extension Client: ClientRequestFactory {
         let requestModel = ChangeUser(baseUrl: baseUrl, idUser: idUser,username: username, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    
 }
    
 extension Client {
