@@ -40,6 +40,11 @@ class RequestFactory {
         return Client(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
+    func makeCatalogRequestFactory() -> CatalogRequestFactory {
+        let errorParser = makeErrorParser()
+        return Catalog(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
     private init() { }
     static let shared = RequestFactory()
     
