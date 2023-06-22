@@ -2,6 +2,8 @@
 
 import UIKit
 
+// https:/ /github.com/GeekBrainsTutorial/online-store-api
+
 class ViewController: UIViewController {
     private var userId: Int = 0
 
@@ -52,6 +54,30 @@ class ViewController: UIViewController {
                   case .failure(let error):
                 print(error.localizedDescription)
             }
+            }
+            
+            //test getCatalog
+            let catalog = RequestFactory.shared.makeCatalogRequestFactory()
+            catalog.getCatalog(pageNumber: 1, idCategory: 1) { [self] response in
+               
+                switch response.result {
+                
+                case .success(let response):
+                    for resp in response {
+                        print(resp.idProduct)
+                    }
+                case .failure(let error) :
+                    print(error.localizedDescription)
+                }
+            }
+            
+            // test getProductById
+            catalog.getProductById(idProduct: 1) {[self] response in
+                switch response.result {
+                case .success(let product) :
+                    print(product)
+                case .failure(let error) :   print(error.localizedDescription)
+                }
             }
             
 
