@@ -49,7 +49,7 @@ extension Auth: AuthRequestFactory {
 extension Auth {
     struct Login: RequestRouter {
                     let baseUrl: URL
-                    let method: HTTPMethod = .get
+                    let method: HTTPMethod = .post
                     let path: String = "login.json"
                     let login: String
                     let password: String
@@ -63,7 +63,7 @@ extension Auth {
     
     struct Logout: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
+        let method: HTTPMethod = .post
         let path: String = "logout.json"
         let idUser: Int
         var parameters: Parameters? {
