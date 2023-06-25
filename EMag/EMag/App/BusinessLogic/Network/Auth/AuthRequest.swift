@@ -1,7 +1,8 @@
-//Created by chizztectep on 12.06.2023 
+// Created by chizztectep on 12.06.2023
 
-import Foundation
 import Alamofire
+import Foundation
+
 
 class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
@@ -9,9 +10,7 @@ class Auth: AbstractRequestFactory {
     let queue: DispatchQueue
   /*  let baseUrl = URL(string:"https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
    */
-    
     let baseUrl = URL(string:"http://127.0.0.1:8080/")!
-    
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,
@@ -21,29 +20,21 @@ class Auth: AbstractRequestFactory {
             self.queue = queue
         }
 }
-        
 extension Auth: AuthRequestFactory {
-   
-    
-   
-    
     func login(userName: String, password: String, completionHandler: @escaping
     (AFDataResponse<LoginResult>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
     func logout(idUser: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
         let requestModel = Logout(baseUrl: baseUrl, idUser: idUser)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    func register(idUser: Int, username: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<RegisterResult>) -> Void) {
+    func register(idUser: Int, username: String, password: String, email: String,                 gender: String, creditCard: String, bio: String,
+                  completionHandler: @escaping (AFDataResponse<RegisterResult>) -> Void) {
         let requestModel = Register(baseUrl: baseUrl, idUser: idUser,username: username, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    
 }
 
 extension Auth {
@@ -60,7 +51,6 @@ extension Auth {
                             ]
                             }
                     }
-    
     struct Logout: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
@@ -72,8 +62,6 @@ extension Auth {
                 ]
                 }
         }
-    
-
 struct Register: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
@@ -96,6 +84,5 @@ struct Register: RequestRouter {
                     "bio": bio
                 ]
                 }
-    }
-    
+    }    
 }

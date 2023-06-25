@@ -1,16 +1,14 @@
-//Created by chizztectep on 18.06.2023 
+// Created by chizztectep on 18.06.2023
 
-import Foundation
 import Alamofire
+import Foundation
 
 class Catalog: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
    /* let baseUrl = URL(string:"https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")! */
-    
     let baseUrl = URL(string:"http://127.0.0.1:8080/")!
-    
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,
@@ -22,22 +20,18 @@ class Catalog: AbstractRequestFactory {
 }
 
 extension Catalog: CatalogRequestFactory {
-   
-   
-    func getCatalog(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<[catalogResult]>) -> Void) {
-        let requestModel = catalogData(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
+    func getCatalog(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<[CatalogResult]>) -> Void) {
+        let requestModel = CatalogData(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
     func getProductById(idProduct: Int, completionHandler: @escaping (AFDataResponse<Product>) -> Void) {
-        let requestModel = productData(baseUrl: baseUrl, idProduct: idProduct)
+        let requestModel = ProductData(baseUrl: baseUrl, idProduct: idProduct)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
 }
 
 extension Catalog {
-    struct catalogData: RequestRouter {
+    struct CatalogData: RequestRouter {
                     let baseUrl: URL
                     let method: HTTPMethod = .post
                     let path: String = "catalogData.json"
@@ -51,19 +45,15 @@ extension Catalog {
                             }
                     }
     
-    struct productData: RequestRouter{
+    struct ProductData: RequestRouter{
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "getGoodById.json"
         let idProduct: Int
-        
         var parameters: Parameters? {
                 return [
                     "id_product": idProduct
                 ]
                 }
     }
-    
-    
 }
-

@@ -1,16 +1,15 @@
-//Created by chizztectep on 12.06.2023 
+// Created by chizztectep on 12.06.2023
 
-import Foundation
 import Alamofire
+import Foundation
+
 
 class Client: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
    /* let baseUrl = URL(string:"https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")! */
-    
     let baseUrl = URL(string:"http://127.0.0.1:8080/")!
-    
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,
@@ -22,14 +21,12 @@ class Client: AbstractRequestFactory {
 }
 
 extension Client: ClientRequestFactory {
-    func changeUser(idUser: Int, username: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<ChangeUserResult>) -> Void) {
+    func changeUser(idUser: Int, username: String, password: String, email: String,                 gender: String, creditCard: String, bio: String,
+                   completionHandler: @escaping (AFDataResponse<ChangeUserResult>) -> Void) {
         let requestModel = ChangeUser(baseUrl: baseUrl, idUser: idUser,username: username, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    
 }
-   
 extension Client {
     struct ChangeUser: RequestRouter {
             let baseUrl: URL
