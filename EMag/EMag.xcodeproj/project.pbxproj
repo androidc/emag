@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B75D9432A48B95E0024FE7D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D9422A48B95E0024FE7D /* Review.swift */; };
+		1B75D9452A48BA140024FE7D /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D9442A48BA140024FE7D /* ReviewRequest.swift */; };
+		1B75D9472A48BAC20024FE7D /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D9462A48BAC20024FE7D /* ReviewRequestFactory.swift */; };
+		1B75D9492A48C07A0024FE7D /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D9482A48C07A0024FE7D /* ReviewTests.swift */; };
 		1BA2E5E22A35E16E00631B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */; };
 		1BA2E5E42A35E16E00631B6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */; };
 		1BA2E5E62A35E16E00631B6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5E52A35E16E00631B6C /* ViewController.swift */; };
@@ -59,6 +63,11 @@
 /* Begin PBXFileReference section */
 		0AA5DB85F49DE97D7EC66AEA /* Pods-EMagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMagTests.debug.xcconfig"; path = "Target Support Files/Pods-EMagTests/Pods-EMagTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1303D747BCFE65E55E8BF28A /* Pods_EMag_EMagUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMag_EMagUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B75D9402A48AE660024FE7D /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		1B75D9422A48B95E0024FE7D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		1B75D9442A48BA140024FE7D /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
+		1B75D9462A48BAC20024FE7D /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
+		1B75D9482A48C07A0024FE7D /* ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
 		1BA2E5DE2A35E16E00631B6C /* EMag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B75D9412A48B9030024FE7D /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				1B75D9442A48BA140024FE7D /* ReviewRequest.swift */,
+				1B75D9462A48BAC20024FE7D /* ReviewRequestFactory.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		1BA2E5D52A35E16E00631B6C = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +175,7 @@
 				1BA2E6132A372F2800631B6C /* Core */,
 				1BA2E6122A372F1600631B6C /* Resources */,
 				1BA2E6112A372F0500631B6C /* Environments */,
+				1B75D9402A48AE660024FE7D /* TODO.md */,
 			);
 			path = EMag;
 			sourceTree = "<group>";
@@ -169,6 +188,7 @@
 				1BA2E6392A3E478C00631B6C /* AuthTests.swift */,
 				1BA2E63B2A3F705900631B6C /* ClientTests.swift */,
 				1BA2E6442A3F800800631B6C /* CatalogTests.swift */,
+				1B75D9482A48C07A0024FE7D /* ReviewTests.swift */,
 			);
 			path = EMagTests;
 			sourceTree = "<group>";
@@ -242,6 +262,7 @@
 				1BA2E6262A375CB800631B6C /* User.swift */,
 				1BA2E6302A3777D600631B6C /* Client.swift */,
 				1BA2E6402A3F74B900631B6C /* Catalog.swift */,
+				1B75D9422A48B95E0024FE7D /* Review.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -267,6 +288,7 @@
 		1BA2E6282A375D0F00631B6C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1B75D9412A48B9030024FE7D /* Review */,
 				1BA2E63D2A3F746000631B6C /* Catalog */,
 				1BA2E6362A37797000631B6C /* Auth */,
 				1BA2E62F2A3777AD00631B6C /* Client */,
@@ -594,9 +616,12 @@
 				1BA2E5E22A35E16E00631B6C /* AppDelegate.swift in Sources */,
 				1BA2E6352A3778C400631B6C /* ClientRequest.swift in Sources */,
 				1BA2E6252A375C8100631B6C /* LoginResult.swift in Sources */,
+				1B75D9432A48B95E0024FE7D /* Review.swift in Sources */,
 				1BA2E62C2A375D7000631B6C /* AuthRequest.swift in Sources */,
 				1BA2E6432A3F760D00631B6C /* CatalogRequest.swift in Sources */,
+				1B75D9452A48BA140024FE7D /* ReviewRequest.swift in Sources */,
 				1BA2E6272A375CB800631B6C /* User.swift in Sources */,
+				1B75D9472A48BAC20024FE7D /* ReviewRequestFactory.swift in Sources */,
 				1BA2E5E42A35E16E00631B6C /* SceneDelegate.swift in Sources */,
 				1BA2E61D2A3757E000631B6C /* ErrorParser.swift in Sources */,
 				1BA2E63F2A3F747E00631B6C /* CatalogRequestFactory.swift in Sources */,
@@ -612,6 +637,7 @@
 				1BA2E63C2A3F705900631B6C /* ClientTests.swift in Sources */,
 				1BA2E6452A3F800800631B6C /* CatalogTests.swift in Sources */,
 				1BA2E6382A3A30D300631B6C /* ResponseCodableTest.swift in Sources */,
+				1B75D9492A48C07A0024FE7D /* ReviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

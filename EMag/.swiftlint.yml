@@ -78,6 +78,9 @@ balanced_xctest_lifecycle: &unit_test_configuration
 empty_xctest_method: *unit_test_configuration
 single_test_class: *unit_test_configuration
 
+cyclomatic_complexity: 
+ ignores_case_statements: true
+
 function_body_length: 60
 type_body_length: 400
 

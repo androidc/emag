@@ -78,5 +78,47 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        // test getReviews
+        let review = RequestFactory.shared.makeReviewRequestFactory()
+        review.getReviews(idProduct: 1) { response in
+            switch response.result {
+            case .success(let reviews):
+                print(reviews)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        // test addReview
+        review.addReview(idUser: 123, text: "jjj") { response in
+            switch response.result {
+            case .success(let reviews):
+                print(reviews)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+
+        // test addReview with error
+        review.addReview(idUser: 1, text: "jjj") { response in
+            switch response.result {
+            case .success(let reviews):
+                print(reviews)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+   
+        // test removeReview
+        review.removeReview(idComment: 123) { response in
+            print("aaa")
+            switch response.result {
+            case .success(let response):
+                print("remove success")
+                print(response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+       
         }
 }

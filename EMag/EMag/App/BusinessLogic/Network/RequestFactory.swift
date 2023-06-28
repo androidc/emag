@@ -36,6 +36,13 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return Catalog(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeReviewRequestFactory() -> ReviewRequestFactory {
+        let errorParser = makeErrorParser()
+        return ReviewRequest(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    
     private init() { }
     
     static let shared = RequestFactory()
