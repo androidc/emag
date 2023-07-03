@@ -1,16 +1,14 @@
-//Created by chizztectep on 12.06.2023 
+// Created by chizztectep on 12.06.2023
 
-import Foundation
 import Alamofire
+import Foundation
+
 
 class CustomDecodableSerializer<T: Decodable>: DataResponseSerializerProtocol {
   private let errorParser: AbstractErrorParser
- 
     init(errorParser: AbstractErrorParser) {
-    self.errorParser = errorParser
-        
-  }
-    
+        self.errorParser = errorParser
+    }
   func serialize(
     request: URLRequest?, response: HTTPURLResponse?,
     data:
@@ -20,9 +18,7 @@ class CustomDecodableSerializer<T: Decodable>: DataResponseSerializerProtocol {
       response: response, data: data,
       error:
         error)
-    {
-      throw error
-    }
+      { throw error }
     do {
       let data = try DataResponseSerializer().serialize(
         request: request,
@@ -75,4 +71,3 @@ extension AbstractRequestFactory {
                     completionHandler: completionHandler)
             }
 }
-

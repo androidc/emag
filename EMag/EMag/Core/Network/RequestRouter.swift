@@ -1,7 +1,7 @@
-//Created by chizztectep on 12.06.2023 
+// Created by chizztectep on 12.06.2023
 
-import Foundation
 import Alamofire
+import Foundation
 
 enum RequestRouterEncoding {
     case url, json
@@ -23,6 +23,7 @@ extension RequestRouter {
     var encoding: RequestRouterEncoding {
         return .url
     }
+    
     func asURLRequest() throws -> URLRequest {
         var urlRequest = URLRequest(url: fullUrl)
         urlRequest.httpMethod = method.rawValue
