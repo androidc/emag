@@ -1,23 +1,37 @@
-//Created by chizztectep on 04.07.2023 
+//Created by chizztectep on 03.07.2023
 
 import XCTest
+@testable import EMag
 
 final class BasketTests: XCTestCase {
-
+    let expectation1 = XCTestExpectation(description: "addBasket passed")
+    var basketFactory: BasketRequestFactory?
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        basketFactory = RequestFactory.shared.makeBasketRequestFactory()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testAddBasket() throws {
+        
+        basketFactory?.addBasket(productId: 1, quantity: 1){ [weak self] response in
+            switch response.result {
+            case .success(let response):
+                //Then
+               XCTAssertEqual(response.result, 1)
+            case .failure(let error):
+                XCTFail()
+            }
+            self?.expectation1.fulfill()
+        }
+        wait(for: [expectation1], timeout: 10.0)
+        
+        
+    
     }
 
     func testPerformanceExample() throws {
