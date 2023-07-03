@@ -24,6 +24,7 @@ extension ReviewRequest: ReviewRequestFactory {
     
     func removeReview(idComment: Int, completionHandler: @escaping (Alamofire.AFDataResponse<RemoveReviewResult>) -> Void) {
         let requestModel = RemoveReviewData(baseUrl: baseUrl, idComment: idComment)
+        self.request(request: requestModel, completionHandler: completionHandler)
     }
     
     

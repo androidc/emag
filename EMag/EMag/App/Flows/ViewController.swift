@@ -88,6 +88,8 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        
+ 
         // test addReview
         review.addReview(idUser: 123, text: "jjj") { response in
             switch response.result {
@@ -107,10 +109,8 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-   
         // test removeReview
         review.removeReview(idComment: 123) { response in
-            print("aaa")
             switch response.result {
             case .success(let response):
                 print("remove success")
@@ -119,6 +119,5 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-       
         }
 }
