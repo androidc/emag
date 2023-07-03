@@ -1,4 +1,4 @@
-//Created by chizztectep on 12.06.2023 
+// Created by chizztectep on 12.06.2023
 
 import Foundation
 
@@ -10,7 +10,6 @@ struct LoginResult: Codable {
 struct LogoutResult: Codable {
     let result: Int
 }
-
 
 struct RegisterResult: Codable {
     let result: Int

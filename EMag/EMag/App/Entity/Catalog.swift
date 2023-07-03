@@ -17,8 +17,7 @@ import Foundation
  ]
  */
 
-
-struct catalogResult: Codable {
+struct CatalogResult: Codable {
     let idProduct: Int
     let productName: String
     let price: Int
@@ -52,5 +51,3 @@ struct Product: Codable {
         case productDescription = "product_description"
     }
 }
-
-
