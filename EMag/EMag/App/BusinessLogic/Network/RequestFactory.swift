@@ -1,4 +1,5 @@
 // Created by chizztectep on 12.06.2023
+// v 1.0.0 lesson6
 
 import Alamofire
 import Foundation

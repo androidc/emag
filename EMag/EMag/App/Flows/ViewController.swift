@@ -1,5 +1,5 @@
 //Created by chizztectep on 11.06.2023 
-
+// v 1.0.0 lesson6
 import UIKit
 
 // https:/ /github.com/GeekBrainsTutorial/online-store-api

@@ -1,10 +1,12 @@
 //Created by chizztectep on 03.07.2023
-
+// v 1.0.0 lesson6
 import XCTest
 @testable import EMag
 
 final class BasketTests: XCTestCase {
     let expectation1 = XCTestExpectation(description: "addBasket passed")
+    let expectation2 = XCTestExpectation(description: "payBasket passed")
+    let expectation3 = XCTestExpectation(description: "removeBasket passed")
     var basketFactory: BasketRequestFactory?
     
     override func setUpWithError() throws {
@@ -29,9 +31,36 @@ final class BasketTests: XCTestCase {
             self?.expectation1.fulfill()
         }
         wait(for: [expectation1], timeout: 10.0)
-        
-        
+    }
     
+    func testPayAddBasket() throws {
+        
+        basketFactory?.payBasket(userId: 1){ [weak self] response in
+            switch response.result {
+            case .success(let response):
+                //Then
+               XCTAssertEqual(response.result, 1)
+            case .failure(let error):
+                XCTFail()
+            }
+            self?.expectation2.fulfill()
+        }
+        wait(for: [expectation2], timeout: 10.0)
+    }
+    
+    func testRemoveBasket() throws {
+        
+        basketFactory?.removeBasket(productId: 1){ [weak self] response in
+            switch response.result {
+            case .success(let response):
+                //Then
+               XCTAssertEqual(response.result, 1)
+            case .failure(let error):
+                XCTFail()
+            }
+            self?.expectation2.fulfill()
+        }
+        wait(for: [expectation2], timeout: 10.0)
     }
 
     func testPerformanceExample() throws {
