@@ -1,5 +1,5 @@
 //Created by chizztectep on 11.06.2023 
-
+// v 1.0.0 lesson6
 import UIKit
 
 // https:/ /github.com/GeekBrainsTutorial/online-store-api
@@ -119,5 +119,37 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-        }
+        
+        // test Basket
+      let basket = RequestFactory.shared.makeBasketRequestFactory()
+      
+      basket.addBasket(productId: 1, quantity: 2) { response in
+          switch response.result {
+          
+          case .success(let response):
+              print(response)
+          case .failure(let error) :
+              print(error.localizedDescription)
+          }
+      }
+  
+      basket.removeBasket(productId: 1) { response in
+          switch response.result {
+          case .success(let response):
+              print(response)
+          case .failure(let error) :
+              print(error.localizedDescription)
+          }
+      }
+      
+      basket.payBasket(userId: 1) { response in
+          switch response.result {
+          case .success(let response):
+              print(response)
+          case .failure(let error) :
+              print(error.localizedDescription)
+          }
+      }
+        
+    }
 }

@@ -1,4 +1,5 @@
 // Created by chizztectep on 12.06.2023
+// v 1.0.0 lesson6
 
 import Alamofire
 import Foundation
@@ -40,6 +41,11 @@ class RequestFactory {
     func makeReviewRequestFactory() -> ReviewRequestFactory {
         let errorParser = makeErrorParser()
         return ReviewRequest(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeBasketRequestFactory() -> BasketRequestFactory {
+        let errorParser = makeErrorParser()
+        return Basket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     
