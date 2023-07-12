@@ -1,7 +1,7 @@
 //Created by chizztectep on 05.07.2023 
 
 import Alamofire
-// фигня полная, зачем сделано непонятно, надо рефакторить
+
 class AuthMethods {
     let auth = RequestFactory.shared.makeAuthRequestFatory()
     

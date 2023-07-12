@@ -39,18 +39,6 @@ class ViewController: UIViewController {
     
     @IBAction func registerButtonAction(_ sender: Any) {
         present(registerView!, animated: true)
-//        addChild(registerView)
-//        view.addSubview(registerView.view)
-//        registerView.didMove(toParent: self)
-//
-//        registerView.view.translatesAutoresizingMaskIntoConstraints = false
-//
-//        [registerView.view.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//         registerView.view.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//         registerView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//         registerView.view.topAnchor.constraint(equalTo: view.topAnchor),
-//         registerView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)].forEach { $0.isActive = true }
-        
     }
     
     private var userId: Int = 0
