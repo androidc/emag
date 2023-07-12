@@ -15,6 +15,9 @@
 		1B75D95C2A5371360024FE7D /* BasketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D95B2A5371360024FE7D /* BasketRequest.swift */; };
 		1B75D95E2A53716B0024FE7D /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D95D2A53716B0024FE7D /* Basket.swift */; };
 		1B75D9602A5372080024FE7D /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D95F2A5372080024FE7D /* BasketTests.swift */; };
+		1B75D9632A55BC220024FE7D /* AuthMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D9622A55BC210024FE7D /* AuthMethods.swift */; };
+		1B75D9692A55CB590024FE7D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D9682A55CB590024FE7D /* UserViewController.swift */; };
+		1B75D96B2A5883770024FE7D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75D96A2A5883770024FE7D /* RegisterView.swift */; };
 		1BA2E5E22A35E16E00631B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */; };
 		1BA2E5E42A35E16E00631B6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */; };
 		1BA2E5E62A35E16E00631B6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2E5E52A35E16E00631B6C /* ViewController.swift */; };
@@ -76,6 +79,9 @@
 		1B75D95B2A5371360024FE7D /* BasketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequest.swift; sourceTree = "<group>"; };
 		1B75D95D2A53716B0024FE7D /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		1B75D95F2A5372080024FE7D /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
+		1B75D9622A55BC210024FE7D /* AuthMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMethods.swift; sourceTree = "<group>"; };
+		1B75D9682A55CB590024FE7D /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		1B75D96A2A5883770024FE7D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		1BA2E5DE2A35E16E00631B6C /* EMag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA2E5E12A35E16E00631B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BA2E5E32A35E16E00631B6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +166,14 @@
 				1B75D95B2A5371360024FE7D /* BasketRequest.swift */,
 			);
 			path = Basket;
+			sourceTree = "<group>";
+		};
+		1B75D9612A55BC140024FE7D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1B75D9622A55BC210024FE7D /* AuthMethods.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		1BA2E5D52A35E16E00631B6C = {
@@ -262,6 +276,8 @@
 			children = (
 				1BA2E5E52A35E16E00631B6C /* ViewController.swift */,
 				1BA2E5E72A35E16E00631B6C /* Main.storyboard */,
+				1B75D9682A55CB590024FE7D /* UserViewController.swift */,
+				1B75D96A2A5883770024FE7D /* RegisterView.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -289,6 +305,7 @@
 		1BA2E6182A372F5B00631B6C /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				1B75D9612A55BC140024FE7D /* User */,
 				1BA2E6282A375D0F00631B6C /* Network */,
 			);
 			path = BusinessLogic;
@@ -555,7 +572,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config .swiftlint.yml\n";
+			shellScript = "
+";
 		};
 		2CE640E9A3AEFD36A5EAF913 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -640,11 +658,14 @@
 				1BA2E62C2A375D7000631B6C /* AuthRequest.swift in Sources */,
 				1BA2E6432A3F760D00631B6C /* CatalogRequest.swift in Sources */,
 				1B75D95E2A53716B0024FE7D /* Basket.swift in Sources */,
+				1B75D96B2A5883770024FE7D /* RegisterView.swift in Sources */,
+				1B75D9632A55BC220024FE7D /* AuthMethods.swift in Sources */,
 				1B75D95C2A5371360024FE7D /* BasketRequest.swift in Sources */,
 				1B75D95A2A5370EB0024FE7D /* BasketRequestFactory.swift in Sources */,
 				1B75D9452A48BA140024FE7D /* ReviewRequest.swift in Sources */,
 				1BA2E6272A375CB800631B6C /* User.swift in Sources */,
 				1B75D9472A48BAC20024FE7D /* ReviewRequestFactory.swift in Sources */,
+				1B75D9692A55CB590024FE7D /* UserViewController.swift in Sources */,
 				1BA2E5E42A35E16E00631B6C /* SceneDelegate.swift in Sources */,
 				1BA2E61D2A3757E000631B6C /* ErrorParser.swift in Sources */,
 				1BA2E63F2A3F747E00631B6C /* CatalogRequestFactory.swift in Sources */,

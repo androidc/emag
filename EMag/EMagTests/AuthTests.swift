@@ -23,7 +23,7 @@ class AuthTests: XCTestCase {
         let auth = RequestFactory.shared.makeAuthRequestFatory()
        
         // When
-        auth.login(userName: "Somebody", password: "mypassword") { [weak self] response in
+        auth.login(userName: "111", password: "111") { [weak self] response in
             switch response.result {
                 case .success(let login):
                 //Then

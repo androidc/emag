@@ -16,13 +16,7 @@ class RequestFactory {
         let manager = Session(configuration: configuration)
         return manager
     }()
-//    func newSession() -> Session {
-//        let configuration = URLSessionConfiguration.default
-//        configuration.httpShouldSetCookies = true
-//        configuration.headers = .default
-//        let manager = Session(configuration: configuration)
-//        return manager
-//    }
+
     let sessionQueue = DispatchQueue.global(qos: .utility)
     func makeAuthRequestFatory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
