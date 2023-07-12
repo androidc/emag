@@ -20,7 +20,7 @@ class AuthTests: XCTestCase {
     func testBuildAuthLogin() throws {
  
         //Given
-        let auth = RequestFactory.shared.makeAuthRequestFatory()
+        let auth = RequestFactory.shared.makeAuthRequestFactory()
        
         // When
         auth.login(userName: "111", password: "111") { [weak self] response in
@@ -41,7 +41,7 @@ class AuthTests: XCTestCase {
     
     func testBuildAuthLogout() throws {
         //Given
-        let auth = RequestFactory.shared.makeAuthRequestFatory()
+        let auth = RequestFactory.shared.makeAuthRequestFactory()
         let idUser = 123
         
         auth.logout(idUser: idUser) { [weak self] response in
@@ -59,7 +59,7 @@ class AuthTests: XCTestCase {
     
     func testBuildAuthRegister() throws {
         //Given
-        let auth = RequestFactory.shared.makeAuthRequestFatory()
+        let auth = RequestFactory.shared.makeAuthRequestFactory()
         let idUser = 123
         
         // test register

@@ -3,7 +3,7 @@
 import Alamofire
 
 class AuthMethods {
-    let auth = RequestFactory.shared.makeAuthRequestFatory()
+    let auth = RequestFactory.shared.makeAuthRequestFactory()
     
     func login(username: String, password: String, completion: @escaping (LoginResult?) -> Void) {
         auth.login(userName: username, password: password) { response in
