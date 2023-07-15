@@ -1,9 +1,9 @@
 //Created by chizztectep on 05.07.2023 
 
 import Alamofire
-// фигня полная, зачем сделано непонятно, надо рефакторить
+
 class AuthMethods {
-    let auth = RequestFactory.shared.makeAuthRequestFatory()
+    let auth = RequestFactory.shared.makeAuthRequestFactory()
     
     func login(username: String, password: String, completion: @escaping (LoginResult?) -> Void) {
         auth.login(userName: username, password: password) { response in

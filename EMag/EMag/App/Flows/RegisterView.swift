@@ -28,10 +28,6 @@ struct RegisterView: View {
                    Form {
                     
                        Section {
-                          
-                              // Text(verbatim: "Login")
-                               //TextView(text: $username, textStyle: $textStyle)
-                                 //  .padding(10)
                            
                            TextField("UserName", text: $username).padding(10)
                            SecureField("Password", text: $password).padding(10)

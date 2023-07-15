@@ -10,6 +10,5 @@ protocol BasketRequestFactory {
                       (AFDataResponse<CommonBasketResult>) -> Void)
     
     func payBasket(userId: Int, completionHandler: @escaping
-                      (AFDataResponse<CommonBasketResult>) -> Void)
-    
+                      (AFDataResponse<CommonBasketResult>) -> Void)    
 }
