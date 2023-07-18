@@ -30,11 +30,28 @@ struct ReviewRow: View {
     }
 }
 
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(.blue)
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+    }
+}
+
 struct ProductView: View {
     // MARK: Vars
     var productId: Int
     @State var productData: ProductData?
     @State var reviewsData: [ReviewData] = []
+    @State var quantity: Int?
+    @State var alertOnEmptyQuantity: Bool = false
+    @State var alertOnAddBasketFailure: Bool = false
+    @State var addBasketError: String = ""
+    
     
     // MARK: body
     var body: some View {
@@ -46,13 +63,42 @@ struct ProductView: View {
                         let productPrice = productData?.productPrice ?? -1
                         Text("Цена: \(productPriceDescription(price:productPrice))")
                         Text("Описание: \(productData?.productDescription ?? "Без описания")")
-                        
+                        HStack{
+                            Button("В корзину") {
+                                if quantity == nil || quantity == 0 {
+                                    alertOnEmptyQuantity = true
+                                } else {
+                                    alertOnEmptyQuantity = false
+                                    // TODO: вызов addBasket
+                                    addBasket(productId: productId, quantity: quantity!)
+                                    
+                                }
+                                
+                            }.buttonStyle(GrowingButton())
+                            .alert(isPresented:$alertOnEmptyQuantity) {
+                                           Alert(
+                                               title: Text("Не указано количество товара"),
+                                               //message: Text("There is no undo"),
+                                               dismissButton: .default(Text("ОК"))
+                                           )
+                                       }
+                            TextField("Кол-во", value: $quantity, format: .number)
+                                 .padding(20)
+                                 .keyboardType(.decimalPad)
+                         }
+
                     }
                 }
                 Section(header: Text("Отзывы")) {
                     List(reviewsData){ review in
                         ReviewRow(review: review)
                     }
+                }.alert(isPresented: $alertOnAddBasketFailure) {
+                    Alert(
+                        title: Text("Ошибка при добавлении товара в корзину"),
+                        message: Text("\(addBasketError)"),
+                        dismissButton: .default(Text("ОК"))
+                    )
                 }
             }
           
@@ -63,12 +109,27 @@ struct ProductView: View {
             
     }
     
+    // MARK: - Private Functions
     private func productPriceDescription(price: Int?) -> String {
         let productPrice = price ?? -1
         return  productPrice == -1 ?  "N/A" : "\(productPrice)"
     }
     
-    func requestProduct() {
+    private func addBasket(productId: Int, quantity: Int) {
+        let basket = RequestFactory.shared.makeBasketRequestFactory()
+        basket.addBasket(productId: productId, quantity: quantity) { response in
+            switch response.result {
+            case .success(let response) : print("Товар добавлен в корзину")
+                                          alertOnAddBasketFailure = false
+            case .failure(let error) :
+                addBasketError = error.localizedDescription
+                alertOnAddBasketFailure = true
+            }
+        }
+
+    }
+    
+    private func requestProduct() {
         let catalog = RequestFactory.shared.makeCatalogRequestFactory()
         catalog.getProductById(idProduct: productId) { response in
             switch response.result {
@@ -80,7 +141,7 @@ struct ProductView: View {
         }
     }
     
-    func requestReviews() {
+    private func requestReviews() {
         // test getReviews
         let review = RequestFactory.shared.makeReviewRequestFactory()
         review.getReviews(idProduct: productId) { response in
@@ -93,14 +154,7 @@ struct ProductView: View {
                 print(error.localizedDescription)
             }
         }
-//        review.getReviews(idProduct: 1) { response in
-//            switch response.result {
-//            case .success(let reviews):
-//                print(reviews)
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
+
     }
 }
 
