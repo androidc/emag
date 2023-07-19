@@ -10,3 +10,12 @@ struct AddBasketResult: Codable {
 struct CommonBasketResult: Codable {
     let result: Int
 }
+
+struct GetBasketResult: Codable {
+    let price: Int
+    let id_product: Int
+    let quantity: Int
+    let name: String
+}
+
+

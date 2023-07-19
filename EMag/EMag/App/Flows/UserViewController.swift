@@ -30,7 +30,15 @@ class UserViewController: UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         guard segue.identifier == "basketSegue" else { return }
+         guard let destination = segue.destination as? BasketViewController else { return }
+         destination.userId = user?.user.id
+     }
+    
     override func viewDidLoad() {
+        
+        
         
         if let user {
             self.nameField.text = user.user.name

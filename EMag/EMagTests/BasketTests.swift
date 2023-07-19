@@ -35,7 +35,7 @@ final class BasketTests: XCTestCase {
     
     func testPayAddBasket() throws {
         
-        basketFactory?.payBasket(userId: 1){ [weak self] response in
+        basketFactory?.payBasket(userId: 1, paymentSum: 100){ [weak self] response in
             switch response.result {
             case .success(let response):
                 //Then

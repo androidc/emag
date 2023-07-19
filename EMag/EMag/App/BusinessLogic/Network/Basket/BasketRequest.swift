@@ -22,6 +22,11 @@ class Basket: AbstractRequestFactory {
 }
 
 extension Basket: BasketRequestFactory {
+    func getBasket(userId: Int, completionHandler: @escaping (Alamofire.AFDataResponse<[GetBasketResult]>) -> Void) {
+        let requestModel = GetBasketData(baseUrl: baseUrl, userId: userId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+    
    
     
     func addBasket(productId: Int, quantity: Int, completionHandler: @escaping (Alamofire.AFDataResponse<AddBasketResult>) -> Void) {
@@ -34,8 +39,8 @@ extension Basket: BasketRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func payBasket(userId: Int, completionHandler: @escaping (Alamofire.AFDataResponse<CommonBasketResult>) -> Void) {
-        let requestModel = PayBasketData(baseUrl: baseUrl, userId: userId)
+    func payBasket(userId: Int, paymentSum:Int, completionHandler: @escaping (Alamofire.AFDataResponse<CommonBasketResult>) -> Void) {
+        let requestModel = PayBasketData(baseUrl: baseUrl, userId: userId, paymentSum:paymentSum)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -73,6 +78,20 @@ extension Basket {
                     let baseUrl: URL
                     let method: HTTPMethod = .post
                     let path: String = "payBasket.json"
+                    let userId: Int
+                    let paymentSum: Int
+                    var parameters: Parameters? {
+                            return [
+                                "id_user": userId,
+                                "paymentSum": paymentSum
+                            ]
+                            }
+                    }
+    
+    struct GetBasketData: RequestRouter {
+                    let baseUrl: URL
+                    let method: HTTPMethod = .post
+                    let path: String = "getBasket.json"
                     let userId: Int
                     var parameters: Parameters? {
                             return [
