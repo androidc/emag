@@ -135,35 +135,35 @@ class ViewController: UIViewController {
         }
         
         // test Basket
-      let basket = RequestFactory.shared.makeBasketRequestFactory()
+    //  let basket = RequestFactory.shared.makeBasketRequestFactory()
       
-      basket.addBasket(productId: 1, quantity: 2) { response in
-          switch response.result {
-          
-          case .success(let response):
-              print(response)
-          case .failure(let error) :
-              print(error.localizedDescription)
-          }
-      }
+//      basket.addBasket(productId: 1, quantity: 2) { response in
+//          switch response.result {
+//
+//          case .success(let response):
+//              print(response)
+//          case .failure(let error) :
+//              print(error.localizedDescription)
+//          }
+//      }
   
-      basket.removeBasket(productId: 1) { response in
-          switch response.result {
-          case .success(let response):
-              print(response)
-          case .failure(let error) :
-              print(error.localizedDescription)
-          }
-      }
+//      basket.removeBasket(productId: 1) { response in
+//          switch response.result {
+//          case .success(let response):
+//              print(response)
+//          case .failure(let error) :
+//              print(error.localizedDescription)
+//          }
+//      }
       
-      basket.payBasket(userId: 1) { response in
-          switch response.result {
-          case .success(let response):
-              print(response)
-          case .failure(let error) :
-              print(error.localizedDescription)
-          }
-      }
+//      basket.payBasket(userId: 1) { response in
+//          switch response.result {
+//          case .success(let response):
+//              print(response)
+//          case .failure(let error) :
+//              print(error.localizedDescription)
+//          }
+//      }
         
     }
 }
