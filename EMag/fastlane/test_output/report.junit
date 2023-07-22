@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='EMagUITests.xctest' tests='25' failures='0'>
+  <testsuite name='EMagTests.AuthTests' tests='3' failures='0'>
+    <testcase classname='EMagTests.AuthTests' name='testBuildAuthLogin' time='0.039'/>
+    <testcase classname='EMagTests.AuthTests' name='testBuildAuthLogout' time='0.017'/>
+    <testcase classname='EMagTests.AuthTests' name='testBuildAuthRegister' time='0.023'/>
+  </testsuite>
+  <testsuite name='EMagTests.BasketTests' tests='4' failures='0'>
+    <testcase classname='EMagTests.BasketTests' name='testAddBasket' time='0.003'/>
+    <testcase classname='EMagTests.BasketTests' name='testPayAddBasket' time='0.003'/>
+    <testcase classname='EMagTests.BasketTests' name='testPerformanceExample' time='0.324'/>
+    <testcase classname='EMagTests.BasketTests' name='testRemoveBasket' time='0.006'/>
+  </testsuite>
+  <testsuite name='EMagTests.CatalogTests' tests='3' failures='0'>
+    <testcase classname='EMagTests.CatalogTests' name='testGetCatalog' time='0.004'/>
+    <testcase classname='EMagTests.CatalogTests' name='testGetProductById' time='0.013'/>
+    <testcase classname='EMagTests.CatalogTests' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+  <testsuite name='EMagTests.ClientTests' tests='1' failures='0'>
+    <testcase classname='EMagTests.ClientTests' name='testChangeUser' time='0.008'/>
+  </testsuite>
+  <testsuite name='EMagTests.EMagTests' tests='1' failures='0'>
+    <testcase classname='EMagTests.EMagTests' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+  <testsuite name='EMagTests.ResponseCodableTest' tests='2' failures='0'>
+    <testcase classname='EMagTests.ResponseCodableTest' name='testPerformanceExample' time='0.253'/>
+    <testcase classname='EMagTests.ResponseCodableTest' name='testShouldDownloadAndParse' time='0.346'/>
+  </testsuite>
+  <testsuite name='EMagTests.ReviewTests' tests='3' failures='0'>
+    <testcase classname='EMagTests.ReviewTests' name='testAddReview' time='0.005'/>
+    <testcase classname='EMagTests.ReviewTests' name='testGetReiews' time='0.003'/>
+    <testcase classname='EMagTests.ReviewTests' name='testPerformanceExample' time='0.252'/>
+  </testsuite>
+  <testsuite name='EMagUITests.EMagUITests' tests='4' failures='0'>
+    <testcase classname='EMagUITests.EMagUITests' name='testExample' time='1.933'/>
+    <testcase classname='EMagUITests.EMagUITests' name='testFail' time='5.500'/>
+    <testcase classname='EMagUITests.EMagUITests' name='testLaunchPerformance' time='79.697'/>
+    <testcase classname='EMagUITests.EMagUITests' name='testSuccess' time='5.755'/>
+  </testsuite>
+  <testsuite name='EMagUITests.EMagUITestsLaunchTests' tests='4' failures='0'>
+    <testcase classname='EMagUITests.EMagUITestsLaunchTests' name='testLaunch' time='3.523'/>
+    <testcase classname='EMagUITests.EMagUITestsLaunchTests' name='testLaunch' time='5.349'/>
+    <testcase classname='EMagUITests.EMagUITestsLaunchTests' name='testLaunch' time='4.159'/>
+    <testcase classname='EMagUITests.EMagUITestsLaunchTests' name='testLaunch' time='5.410'/>
+  </testsuite>
+</testsuites>
