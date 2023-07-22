@@ -11,7 +11,7 @@ struct CatalogData: Identifiable{
 }
 
 
-// A view that shows the data for one Restaurant.
+/// A view that shows the data for one product.
 struct ProductRow: View {
     var product: CatalogData
 
@@ -19,6 +19,11 @@ struct ProductRow: View {
         HStack {
             Text(product.name)
             Text("\(product.price)")
+            NavigationLink {
+                ProductView(productId: product.productId)
+            } label: {
+               
+            }
         }
     }
 }

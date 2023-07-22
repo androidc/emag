@@ -9,6 +9,9 @@ protocol BasketRequestFactory {
     func removeBasket(productId: Int, completionHandler: @escaping
                       (AFDataResponse<CommonBasketResult>) -> Void)
     
-    func payBasket(userId: Int, completionHandler: @escaping
-                      (AFDataResponse<CommonBasketResult>) -> Void)    
+    func payBasket(userId: Int, paymentSum: Int, completionHandler: @escaping
+                      (AFDataResponse<CommonBasketResult>) -> Void)
+    
+    func getBasket(userId:Int,completionHandler:  @escaping
+                   (AFDataResponse<[GetBasketResult]>) -> Void)
 }
