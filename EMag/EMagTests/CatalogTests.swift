@@ -38,7 +38,7 @@ class CatalogTests: XCTestCase {
     }
     
     func testGetProductById() throws {
-        catalogFactory?.getProductById(idProduct: 1) {[weak self] response in
+        catalogFactory?.getProductById(idProduct: 123) {[weak self] response in
             switch response.result {
             case .success(let product) :
                 XCTAssertEqual(product.result, 1)

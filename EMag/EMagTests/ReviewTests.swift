@@ -22,7 +22,7 @@ final class ReviewTests: XCTestCase {
    
     func testGetReiews() throws {
         // When
-        reviewFactory?.getReviews(idProduct: 1, completionHandler: { [weak self] response in
+        reviewFactory?.getReviews(idProduct: 123, completionHandler: { [weak self] response in
             switch response.result {
 
             case .success(let response):
